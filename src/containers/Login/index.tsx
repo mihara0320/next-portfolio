@@ -1,5 +1,4 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import joi from 'joi'
 import {
   Container,
@@ -31,7 +30,6 @@ const schema = joi.object({
 })
 
 export const Login: React.VFC = () => {
-  const router = useRouter()
   const form = useForm<LoginForm>({ schema })
   const { login } = useAuth()
 
@@ -57,14 +55,6 @@ export const Login: React.VFC = () => {
     await login(values.email, values.password)
     location.href = '/'
     return
-  }
-
-  const handlePasswordRestLinkClick = (
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-  ) => {
-    event.preventDefault()
-    console.log('handlePasswordRestLinkClick')
-    return router.push(`/request-password-reset`)
   }
 
   return (
