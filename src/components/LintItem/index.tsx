@@ -1,13 +1,18 @@
 import React, { FC } from 'react'
-import { LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
+import {
+  LinkBox,
+  LinkOverlay,
+  LinkOverlayProps,
+  useColorModeValue,
+} from '@chakra-ui/react'
 
-export type Props = {
+export type LinkItemProps = LinkOverlayProps & {
   href: string
   path: string
   _target?: string
   children?: React.ReactNode
 }
-const LinkItem: FC<Props> = ({ href, path, children, ...rest }) => {
+const LinkItem: FC<LinkItemProps> = ({ href, path, children, ...rest }) => {
   const active = path === href
 
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')

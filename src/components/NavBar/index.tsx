@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import NextLink from 'next/link'
 import {
   Container,
@@ -12,6 +13,7 @@ import {
   MenuButton,
   IconButton,
   useColorModeValue,
+  BoxProps,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io5'
@@ -20,13 +22,11 @@ import Logo from 'components/Logo'
 import ThemeToggleButton from 'components/ThemeToggleButton'
 import { NavItems } from 'constants/navs'
 
-type NavbarProps = {
+type NavbarProps = BoxProps & {
   path: string
 }
 
-const Navbar = (props: NavbarProps) => {
-  const { path } = props
-
+const Navbar: FC<NavbarProps> = ({ path, ...rest }) => {
   return (
     <Box
       position="fixed"
@@ -35,7 +35,7 @@ const Navbar = (props: NavbarProps) => {
       bg={useColorModeValue('#ffffff40', '#20202380')}
       css={{ backdropFilter: 'blur(10px)' }}
       zIndex={1}
-      {...props}
+      {...rest}
     >
       <Container
         display="flex"
@@ -90,15 +90,11 @@ const Navbar = (props: NavbarProps) => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
-                </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink>
+                {NavItems.map((item, idx) => (
+                  <NextLink key={idx} href={item.path} passHref>
+                    <MenuItem as={Link}> {item.name}</MenuItem>
+                  </NextLink>
+                ))}
                 <MenuItem
                   as={Link}
                   href="https://github.com/craftzdog/craftzdog-homepage"

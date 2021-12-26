@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
@@ -41,7 +42,7 @@ const LogoBox = styled.span`
   }
 `
 
-const Logo = () => {
+const Logo: FC = () => {
   return (
     <Link href="/">
       <a>
