@@ -1,6 +1,5 @@
 export const HOME_PATH = '/'
 export const LOGOUT_PATH = '/logout'
 export const LOGIN_PATH = '/login'
-export const ABOUT_PATH = '/about'
 export const EXPERIENCE_PATH = '/experience'
 export const SKILLS_PATH = '/skills'

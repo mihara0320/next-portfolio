@@ -20,7 +20,7 @@ import { IoLogoGithub } from 'react-icons/io5'
 import LinkItem from 'components/LintItem'
 import Logo from 'components/Logo'
 import ThemeToggleButton from 'components/ThemeToggleButton'
-import { NavItems } from 'constants/navs'
+import { DesktopNavs, MobileNavs } from 'constants/navs'
 
 type NavbarProps = BoxProps & {
   path: string
@@ -59,14 +59,14 @@ const Navbar: FC<NavbarProps> = ({ path, ...rest }) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          {NavItems.map((item, idx) => (
+          {DesktopNavs.map((item, idx) => (
             <LinkItem key={idx} href={item.path} path={path}>
               {item.name}
             </LinkItem>
           ))}
           <LinkItem
             _target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
+            href="https://github.com/mihara0320/next-portfolio"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -74,7 +74,7 @@ const Navbar: FC<NavbarProps> = ({ path, ...rest }) => {
             pl={2}
           >
             <IoLogoGithub />
-            Source
+            SOURCE
           </LinkItem>
         </Stack>
 
@@ -90,17 +90,11 @@ const Navbar: FC<NavbarProps> = ({ path, ...rest }) => {
                 aria-label="Options"
               />
               <MenuList>
-                {NavItems.map((item, idx) => (
+                {MobileNavs.map((item, idx) => (
                   <NextLink key={idx} href={item.path} passHref>
                     <MenuItem as={Link}> {item.name}</MenuItem>
                   </NextLink>
                 ))}
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
-                  View Source
-                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

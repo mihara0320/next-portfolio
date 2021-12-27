@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Senior Software Engineer",
+    "name": "GrabCAD",
+    "location": "Tallinn, Estonia",
+    "period": "MAR 2019 - PRESENT",
+    "description": "This is my job"
+  },
+  {
+    "title": "Software Engineer",
+    "name": "LEXIT",
+    "location": "Tallinn, Estonia",
+    "period": "AUG 2018 - FEB 2019",
+    "description": "This is my job"
+  },
+  {
+    "title": "Part-time Software Engineer",
+    "name": "COMODULE",
+    "location": "Tallinn, Estonia",
+    "period": "AUG 2018 - Oct 2018",
+    "description": "This is my job"
+  },
+  {
+    "title": "Software Engineer",
+    "name": "COMODULE",
+    "location": "Tallinn, Estonia",
+    "period": "JAN 2018 - AUG 2018",
+    "description": "This is my job"
+  },
+  {
+    "title": "Frontend Developer",
+    "name": "Ganalogics",
+    "location": "Tallinn, Estonia",
+    "period": "NOV 2016 - JAN 2018",
+    "description": "This is my job"
+  }
+]
