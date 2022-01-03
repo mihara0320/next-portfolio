@@ -1,37 +1,18 @@
 import { VFC } from 'react'
-import NextLink from 'next/link'
-import {
-  Link,
-  Container,
-  Heading,
-  Box,
-  Image,
-  Button,
-  useColorModeValue,
-} from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { Container, Text, Box, Image } from '@chakra-ui/react'
 import TransitionSection from 'components/TransitionSection'
 import Paragraph from 'components/Paragraph'
+import Title from 'components/Title'
 
 const About: VFC = () => {
   return (
-    <Container>
-      <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-      >
-        Hello, I&apos;m a full-stack developer based in Japan!
-      </Box>
-
+    <Container mt="3em" mb="3em">
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Masaki Ihara
-          </Heading>
-          <p>Software Engineer</p>
+          <Title as="h2" variant="page-title">
+            MASAKI IHARA
+          </Title>
+          <Text>SOFTWARE ENGINEER</Text>
         </Box>
         <Box
           flexShrink={0}
@@ -53,28 +34,16 @@ const About: VFC = () => {
       </Box>
 
       <TransitionSection delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          Work
-        </Heading>
-        <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop">
-            <Link>Inkdrop</Link>
-          </NextLink>
-          .
+        <Paragraph m="1em">
+          北欧在住&歴7年目のフルスタックエンジニアです。エストニアの大学でサイバーセキュリティー学部を専攻し、在学中に現地企業にてソフトウェアエンジニアとして就職しました。
         </Paragraph>
-        <Box align="center" my={4}>
-          <NextLink href="/works">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
-            </Button>
-          </NextLink>
-        </Box>
+        <Paragraph m="1em">
+          主に Agile/Scrum
+          そして比較的モダンな技術を使用した開発経験が豊富です。バックエンド、フロントエンド、Windowsアプリ開発、インフラ構築など様々な方面から携わってきました。
+        </Paragraph>
+        <Paragraph m="1em">
+          直近では新事業で0からSDKを開発する少数先鋭のリードエンジニアを経験しました。最近ではマネジメントやDevOps関連の技術に注力しています。
+        </Paragraph>
       </TransitionSection>
     </Container>
   )

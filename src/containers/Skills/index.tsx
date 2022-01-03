@@ -12,7 +12,7 @@ import TransitionSection from 'components/TransitionSection'
 
 const Skills: VFC = () => {
   return (
-    <Container m="2em 0">
+    <Container mt="3em" mb="3em">
       <TransitionSection delay={0.1}>
         <Heading m="1em 0" size="md" variant="section-title">
           LANGUAGES
