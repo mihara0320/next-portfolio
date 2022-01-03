@@ -1,8 +1,9 @@
 import { VFC } from 'react'
-import { Container, Text, Box, Image } from '@chakra-ui/react'
+import { Container, Box, Image } from '@chakra-ui/react'
 import TransitionSection from 'components/TransitionSection'
 import Paragraph from 'components/Paragraph'
 import Title from 'components/Title'
+import SubTitle from 'components/SubTitle'
 
 const About: VFC = () => {
   return (
@@ -12,7 +13,7 @@ const About: VFC = () => {
           <Title as="h2" variant="page-title">
             MASAKI IHARA
           </Title>
-          <Text>SOFTWARE ENGINEER</Text>
+          <SubTitle>SOFTWARE ENGINEER</SubTitle>
         </Box>
         <Box
           flexShrink={0}
@@ -21,8 +22,8 @@ const About: VFC = () => {
           textAlign="center"
         >
           <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
+            borderColor="grey.500"
+            borderWidth={6}
             borderStyle="solid"
             maxWidth="100px"
             display="inline-block"

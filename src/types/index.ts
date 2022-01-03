@@ -21,7 +21,9 @@ export type AppPropsWithLayout = AppProps & {
 export type ExperienceData = {
   title: string
   name: string
+  size?: string
   location: string
   period: string
   description: string
+  technology?: Array<string>
 }

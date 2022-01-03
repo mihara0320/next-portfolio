@@ -5,6 +5,7 @@ const Title = styled(Heading)`
   :first-letter {
     color: #ecc94b;
     font-weight: bold;
+    font-size: 1.5em;
   }
 `
 
