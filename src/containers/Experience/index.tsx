@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { Container, Heading } from '@chakra-ui/react'
+import { Container } from '@chakra-ui/react'
 import * as workHistory from './work_history.json'
 import * as academicHistory from './academic_history.json'
 import Title from 'components/Title'
@@ -22,9 +22,9 @@ const Experience: NextPage = () => {
         )
       })}
 
-      <Heading m="1em 0" size="md" variant="section-title">
-        EDUCATION
-      </Heading>
+      <Title m="1em 0" size="md" variant="section-title">
+        PROFESSIONAL EXPERIENCE
+      </Title>
       {academicHistory.map((data, i) => {
         return (
           <Exp

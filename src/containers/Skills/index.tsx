@@ -1,5 +1,15 @@
 import { VFC } from 'react'
-import { Container, Heading, Stack, Badge } from '@chakra-ui/react'
+import {
+  Container,
+  Heading,
+  Stack,
+  Badge,
+  CircularProgress,
+  CircularProgressLabel,
+  Flex,
+  Code,
+  Tag,
+} from '@chakra-ui/react'
 import {
   languages,
   frameworks,
@@ -8,28 +18,52 @@ import {
   workflow,
   others,
 } from './data.json'
+import Title from 'components/Title'
 import TransitionSection from 'components/TransitionSection'
 
+const getLevelColor = (level: number) => {
+  if (level > 80) return 'green.400'
+  if (level > 60) return 'teal.400'
+  if (level > 40) return 'orange.400'
+  if (level > 20) return 'red.400'
+}
 const Skills: VFC = () => {
   return (
     <Container mt="3em" mb="3em">
       <TransitionSection delay={0.1}>
-        <Heading m="1em 0" size="md" variant="section-title">
+        <Title m="1em 0" size="md" variant="section-title">
           LANGUAGES
-        </Heading>
-        <Stack direction="row">
+        </Title>
+        <Stack direction="row" w="400px" shouldWrapChildren wrap={'wrap'}>
           {languages.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.2}>
-              <Badge>{data}</Badge>
+              <Flex
+                m={1}
+                direction="column"
+                justifyContent="center"
+                alignContent="center"
+                alignItems="center"
+              >
+                <Tag>{data.name}</Tag>
+                <CircularProgress
+                  value={data.level}
+                  size="75px"
+                  thickness="15px"
+                  color={getLevelColor(data.level)}
+                  mt={1}
+                >
+                  <CircularProgressLabel>{data.level}</CircularProgressLabel>
+                </CircularProgress>
+              </Flex>
             </TransitionSection>
           ))}
         </Stack>
       </TransitionSection>
 
       <TransitionSection delay={0.2}>
-        <Heading m="1em 0" size="md" variant="section-title">
+        <Title m="1em 0" size="md" variant="section-title">
           FRAMEWORKS
-        </Heading>
+        </Title>
         <Stack direction="row">
           {frameworks.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.2}>
@@ -40,9 +74,9 @@ const Skills: VFC = () => {
       </TransitionSection>
 
       <TransitionSection delay={0.3}>
-        <Heading m="1em 0" size="md" variant="section-title">
+        <Title m="1em 0" size="md" variant="section-title">
           DATABASES
-        </Heading>
+        </Title>
         <Stack direction="row">
           {databases.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.2}>
@@ -53,9 +87,9 @@ const Skills: VFC = () => {
       </TransitionSection>
 
       <TransitionSection delay={0.4}>
-        <Heading m="1em 0" size="md" variant="section-title">
+        <Title m="1em 0" size="md" variant="section-title">
           INFRASTRUCTURE
-        </Heading>
+        </Title>
         <Stack direction="row">
           {infrastructure.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.2}>
@@ -66,9 +100,9 @@ const Skills: VFC = () => {
       </TransitionSection>
 
       <TransitionSection delay={0.5}>
-        <Heading m="1em 0" size="md" variant="section-title">
+        <Title m="1em 0" size="md" variant="section-title">
           WORKFLOW
-        </Heading>
+        </Title>
         <Stack direction="row">
           {workflow.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.2}>
@@ -79,9 +113,9 @@ const Skills: VFC = () => {
       </TransitionSection>
 
       <TransitionSection delay={0.6}>
-        <Heading m="1em 0" size="md" variant="section-title">
+        <Title m="1em 0" size="md" variant="section-title">
           OTHERS
-        </Heading>
+        </Title>
         <Stack direction="row">
           {others.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.2}>
