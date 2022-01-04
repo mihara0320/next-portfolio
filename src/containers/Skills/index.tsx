@@ -1,13 +1,11 @@
 import { VFC } from 'react'
 import {
   Container,
-  Heading,
   Stack,
   Badge,
   CircularProgress,
   CircularProgressLabel,
   Flex,
-  Code,
   Tag,
 } from '@chakra-ui/react'
 import {
@@ -34,7 +32,7 @@ const Skills: VFC = () => {
         <Title m="1em 0" size="md" variant="section-title">
           LANGUAGES
         </Title>
-        <Stack direction="row" w="400px" shouldWrapChildren wrap={'wrap'}>
+        <Stack direction="row" w="400px" wrap={'wrap'}>
           {languages.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.2}>
               <Flex
@@ -64,7 +62,7 @@ const Skills: VFC = () => {
         <Title m="1em 0" size="md" variant="section-title">
           FRAMEWORKS
         </Title>
-        <Stack direction="row">
+        <Stack direction="row" w="400px" wrap={'wrap'}>
           {frameworks.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.2}>
               <Badge>{data}</Badge>
