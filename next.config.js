@@ -2,6 +2,6 @@
 
 module.exports = {
   reactStrictMode: true,
-  basePath: '/next-portfolio',
-  assetPrefix: '/next-portfolio/',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH,
 }
