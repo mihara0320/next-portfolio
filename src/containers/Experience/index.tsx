@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import { Container } from '@chakra-ui/react'
-import * as workHistory from './work_history.json'
-import * as academicHistory from './academic_history.json'
+import { data as workHistory } from './work_history.json'
+import { data as academicHistory } from './academic_history.json'
 import Title from 'components/Title'
 import Exp from 'components/Experience'
 
