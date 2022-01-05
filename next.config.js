@@ -2,5 +2,6 @@
 
 module.exports = {
   reactStrictMode: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/next-portfolio/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/next-portfolio' : '/',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/next-portfolio/' : '/',
 }
