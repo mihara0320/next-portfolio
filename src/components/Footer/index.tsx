@@ -8,7 +8,7 @@ const Footer: FC = () => {
         maxWidth="100px"
         display="inline-block"
         borderRadius="full"
-        src="/images/seal-csm.png"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/seal-csm.png`}
         alt="csm image"
       />
       <Text opacity={0.4}>

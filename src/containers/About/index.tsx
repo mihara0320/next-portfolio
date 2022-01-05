@@ -28,7 +28,7 @@ const About: VFC = () => {
             maxWidth="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/profile.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/profile.png`}
             alt="Profile image"
           />
         </Box>
