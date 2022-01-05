@@ -1,12 +1,11 @@
 import 'styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppPropsWithLayout } from '../types'
 import { RootContainer } from 'templates/RootContainer'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page)
   return (
-    <RootContainer>
-      <Component {...pageProps} />
-    </RootContainer>
+    <RootContainer>{getLayout(<Component {...pageProps} />)}</RootContainer>
   )
 }
 

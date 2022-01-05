@@ -1,0 +1,36 @@
+{
+  "languages": [{
+    "name" :"Javascript",
+    "level" : 100
+  },
+    {
+      "name" :"Typescript",
+      "level" : 100
+    },
+    {
+      "name" :"C#",
+      "level" : 80
+    },
+    {
+      "name" :"Ruby",
+      "level" : 50
+    },
+    {
+      "name" :"Python",
+      "level" : 50
+    },
+    {
+      "name" :"SQL",
+      "level" : 75
+    },
+    {
+      "name" :"Bash",
+      "level" : 50
+    }
+  ],
+  "frameworks": ["Node.js", ".Net Frameworks", ".Net Core", "React", "Next.js", "Angular", "Ruby on Rails"],
+  "databases": ["PostgresSQL", "MySQL", "MS SQL", "MongoDB", "Redis", "Elasticsearch"],
+  "infrastructure": ["AWS", "GCP", "Firebase", "Docker", "kubernetes", "istio", "terraform"],
+  "workflow": ["Scrum", "Kanban"],
+  "others": ["nginx", "apache", "ELK stuck", "...etc"]
+}

@@ -17,3 +17,13 @@ export type NextPageWithLayout = NextPage & {
 export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
+
+export type ExperienceData = {
+  title: string
+  name: string
+  size?: string
+  location: string
+  period: string
+  description: string
+  technology?: Array<string>
+}
