@@ -17,8 +17,10 @@ const HStackLayout: FC<Props> = ({ children }) => {
       <Metadata />
       <NavBar path={router.asPath} />
 
-      <Container maxW="container.md" pt={14}>
-        <HStack>{children}</HStack>
+      <Container maxW="container.,d" pt={14}>
+        <HStack shouldWrapChildren wrap={'wrap'}>
+          {children}
+        </HStack>
       </Container>
       <Footer />
     </Box>
