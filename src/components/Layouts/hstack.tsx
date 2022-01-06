@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Container, HStack } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import Metadata from 'components/Metadata'
 import Footer from 'components/Footer'
@@ -9,22 +9,20 @@ type Props = {
   children: React.ReactNode
 }
 
-const MainLayout: FC<Props> = ({ children }) => {
+const HStackLayout: FC<Props> = ({ children }) => {
   const router = useRouter()
 
   return (
     <Box as="main" pb={8}>
       <Metadata />
-
       <NavBar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
-        {children}
+        <HStack>{children}</HStack>
       </Container>
-
       <Footer />
     </Box>
   )
 }
 
-export default MainLayout
+export default HStackLayout

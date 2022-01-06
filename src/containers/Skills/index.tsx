@@ -7,7 +7,18 @@ import {
   CircularProgressLabel,
   Flex,
   Tag,
+  HStack,
+  Table,
+  Td,
+  Tbody,
+  Tr,
+  Progress,
+  Text,
+  List,
+  ListItem,
+  ListIcon,
 } from '@chakra-ui/react'
+import { MdCheckCircle } from 'react-icons/md'
 import {
   languages,
   frameworks,
@@ -18,31 +29,35 @@ import {
 } from './data.json'
 import Title from 'components/Title'
 import TransitionSection from 'components/TransitionSection'
+import SubTitle from 'components/SubTitle'
 
 const getLevelColor = (level: number) => {
-  if (level > 80) return 'green.400'
-  if (level > 60) return 'teal.400'
-  if (level > 40) return 'orange.400'
-  if (level > 20) return 'red.400'
+  if (level > 80) return 'green'
+  if (level > 50) return 'teal'
+  if (level > 30) return 'orange'
+  if (level > 20) return 'red'
 }
 const Skills: VFC = () => {
   return (
     <Container mt="3em" mb="3em">
+      <Title m="1em 0" size="md" variant="section-title">
+        PROFESSIONAL SKILLS
+      </Title>
       <TransitionSection delay={0.1}>
-        <Title m="1em 0" size="md" variant="section-title">
-          LANGUAGES
-        </Title>
-        <Stack direction="row" w="400px" wrap={'wrap'}>
+        <SubTitle m="1em 0" size="md" variant="section-title">
+          PROGRAMMING LANGUAGES
+        </SubTitle>
+        <HStack shouldWrapChildren wrap={'wrap'}>
           {languages.map((data, i) => (
-            <TransitionSection key={i} delay={i * 0.2}>
+            <TransitionSection key={i} delay={i * 0.1}>
               <Flex
-                m={1}
+                m={2}
                 direction="column"
                 justifyContent="center"
                 alignContent="center"
                 alignItems="center"
               >
-                <Tag>{data.name}</Tag>
+                <Text>{data.name}</Text>
                 <CircularProgress
                   value={data.level}
                   size="75px"
@@ -55,68 +70,89 @@ const Skills: VFC = () => {
               </Flex>
             </TransitionSection>
           ))}
-        </Stack>
+        </HStack>
       </TransitionSection>
 
       <TransitionSection delay={0.2}>
-        <Title m="1em 0" size="md" variant="section-title">
+        <SubTitle m="1em 0" size="md" variant="section-title">
           FRAMEWORKS
-        </Title>
-        <Stack direction="row" w="400px" wrap={'wrap'}>
+        </SubTitle>
+        <HStack shouldWrapChildren wrap={'wrap'}>
           {frameworks.map((data, i) => (
-            <TransitionSection key={i} delay={i * 0.2}>
-              <Badge>{data}</Badge>
+            <TransitionSection key={i} delay={i * 0.1}>
+              <Tag m={1} variant="outline">
+                {data}
+              </Tag>
             </TransitionSection>
           ))}
-        </Stack>
+        </HStack>
       </TransitionSection>
 
       <TransitionSection delay={0.3}>
-        <Title m="1em 0" size="md" variant="section-title">
+        <SubTitle m="1em 0" size="md" variant="section-title">
           DATABASES
-        </Title>
-        <Stack direction="row">
-          {databases.map((data, i) => (
-            <TransitionSection key={i} delay={i * 0.2}>
-              <Badge>{data}</Badge>
-            </TransitionSection>
-          ))}
-        </Stack>
+        </SubTitle>
+        <Table variant="unstyled" flex="grow">
+          <Tbody>
+            {databases.map((data, i) => (
+              <TransitionSection key={i} delay={i * 0.1}>
+                <Tr>
+                  <Td>
+                    <Progress
+                      width={150}
+                      colorScheme={getLevelColor(data.level)}
+                      size="lg"
+                      value={data.level}
+                    />
+                  </Td>
+                  <Td>
+                    <Text>{data.name}</Text>
+                  </Td>
+                </Tr>
+              </TransitionSection>
+            ))}
+          </Tbody>
+        </Table>
       </TransitionSection>
 
       <TransitionSection delay={0.4}>
-        <Title m="1em 0" size="md" variant="section-title">
+        <SubTitle m="1em 0" size="md" variant="section-title">
           INFRASTRUCTURE
-        </Title>
-        <Stack direction="row">
+        </SubTitle>
+        <HStack shouldWrapChildren wrap={'wrap'}>
           {infrastructure.map((data, i) => (
-            <TransitionSection key={i} delay={i * 0.2}>
-              <Badge>{data}</Badge>
+            <TransitionSection key={i} delay={i * 0.1}>
+              <Tag m={1} variant="outline">
+                {data}
+              </Tag>
             </TransitionSection>
           ))}
-        </Stack>
+        </HStack>
       </TransitionSection>
 
       <TransitionSection delay={0.5}>
-        <Title m="1em 0" size="md" variant="section-title">
+        <SubTitle m="1em 0" size="md" variant="section-title">
           WORKFLOW
-        </Title>
-        <Stack direction="row">
+        </SubTitle>
+        <List spacing={3}>
           {workflow.map((data, i) => (
-            <TransitionSection key={i} delay={i * 0.2}>
-              <Badge>{data}</Badge>
+            <TransitionSection key={i} delay={i * 0.1}>
+              <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
+                {data}
+              </ListItem>
             </TransitionSection>
           ))}
-        </Stack>
+        </List>
       </TransitionSection>
 
       <TransitionSection delay={0.6}>
-        <Title m="1em 0" size="md" variant="section-title">
+        <SubTitle m="1em 0" size="md" variant="section-title">
           OTHERS
-        </Title>
+        </SubTitle>
         <Stack direction="row">
           {others.map((data, i) => (
-            <TransitionSection key={i} delay={i * 0.2}>
+            <TransitionSection key={i} delay={i * 0.1}>
               <Badge>{data}</Badge>
             </TransitionSection>
           ))}

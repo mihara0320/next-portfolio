@@ -23,7 +23,7 @@ const Experience: NextPage = () => {
       })}
 
       <Title m="1em 0" size="md" variant="section-title">
-        PROFESSIONAL EXPERIENCE
+        EDUCATION
       </Title>
       {academicHistory.map((data, i) => {
         return (
