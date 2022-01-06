@@ -13,7 +13,7 @@ export type LinkItemProps = LinkOverlayProps & {
   children?: React.ReactNode
 }
 const LinkItem: FC<LinkItemProps> = ({ href, path, children, ...rest }) => {
-  const active = href.includes(path)
+  const active = path !== '/' && href.includes(path)
 
   const inactiveColor = useColorModeValue('Black', 'whiteAlpha.900')
   return (
