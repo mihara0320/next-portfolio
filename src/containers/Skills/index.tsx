@@ -153,7 +153,9 @@ const Skills: VFC = () => {
         <Stack direction="row">
           {others.map((data, i) => (
             <TransitionSection key={i} delay={i * 0.1}>
-              <Badge>{data}</Badge>
+              <Tag m={1} variant="outline">
+                {data}
+              </Tag>
             </TransitionSection>
           ))}
         </Stack>
