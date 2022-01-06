@@ -12,6 +12,10 @@
       "level" : 80
     },
     {
+      "name" :"SQL",
+      "level" : 75
+    },
+    {
       "name" :"Ruby",
       "level" : 50
     },
@@ -20,17 +24,38 @@
       "level" : 50
     },
     {
-      "name" :"SQL",
-      "level" : 75
-    },
-    {
       "name" :"Bash",
       "level" : 50
     }
   ],
-  "frameworks": ["Node.js", ".Net Frameworks", ".Net Core", "React", "Next.js", "Angular", "Ruby on Rails"],
-  "databases": ["PostgresSQL", "MySQL", "MS SQL", "MongoDB", "Redis", "Elasticsearch"],
-  "infrastructure": ["AWS", "GCP", "Firebase", "Docker", "kubernetes", "istio", "terraform"],
-  "workflow": ["Scrum", "Kanban"],
+  "frameworks": ["Node.js", "Express", ".Net Frameworks", ".Net Core", "React", "Next.js", "Angular", "Ruby on Rails", "Material UI", "Chakra UI", "Bootstrap"],
+  "databases": [
+    {
+      "name" :"PostgresSQL",
+      "level" : 90
+    },
+    {
+      "name" :"MySQL",
+      "level" : 75
+    },
+    {
+      "name" :"MSSQL",
+      "level" : 70
+    },
+    {
+      "name" :"MongoDB",
+      "level" : 60
+    },
+    {
+      "name" :"Redis",
+      "level" : 90
+    },
+    {
+      "name" :"Elasticsearch",
+      "level" : 60
+    }
+  ],
+  "infrastructure": ["AWS", "GCP", "Firebase", "TeamCity", "Docker", "Kubernetes", "istio", "terraform", "Github Actions"],
+  "workflow": ["TDD", "CI/CD", "Agile/Scrum", "Kanban", "Remote Working"],
   "others": ["nginx", "apache", "ELK stuck", "...etc"]
 }
