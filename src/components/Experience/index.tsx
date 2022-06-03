@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Badge, Box, Flex, Stack, Text } from '@chakra-ui/react'
+import { Badge, Box, Flex, HStack, Text } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import TransitionSection, { SectionProps } from 'components/TransitionSection'
 import { ExperienceData } from 'types'
@@ -64,7 +64,13 @@ const Exp: FC<ExpProps> = ({
         <ExpLocation fontSize="sm">{location}</ExpLocation>
         <ExpDescription fontSize="sm">{description}</ExpDescription>
 
-        <Stack direction="row">
+        <HStack
+          justifyContent="flex-start"
+          alignItems="flex-start"
+          spacing={2}
+          shouldWrapChildren
+          wrap={'wrap'}
+        >
           {technology &&
             technology.length > 0 &&
             technology.map((t, i) => (
@@ -72,7 +78,7 @@ const Exp: FC<ExpProps> = ({
                 {t}
               </Badge>
             ))}
-        </Stack>
+        </HStack>
       </ExpSection>
     </TransitionSection>
   )
