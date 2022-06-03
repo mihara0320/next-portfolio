@@ -1,11 +1,22 @@
-import { VFC } from 'react'
+import { useEffect, useState, VFC } from 'react'
 import { Container, Box, Image } from '@chakra-ui/react'
+import { differenceInYears } from 'date-fns'
 import TransitionSection from 'components/TransitionSection'
 import Paragraph from 'components/Paragraph'
 import Title from 'components/Title'
 import SubTitle from 'components/SubTitle'
 
 const About: VFC = () => {
+  const startYear = 2016
+  const [experienceInYear, setExperienceInYear] = useState<number>()
+
+  useEffect(() => {
+    const diff = differenceInYears(new Date(), new Date(2016, 1, 1))
+    console.log(new Date())
+    console.log(new Date(2016, 1, 1))
+    setExperienceInYear(diff)
+  }, [])
+
   return (
     <Container mt="3em" mb="3em">
       <Box display={{ md: 'flex' }}>
@@ -36,18 +47,27 @@ const About: VFC = () => {
 
       <TransitionSection delay={0.2}>
         <Paragraph m="1em">
-          北欧在住&歴7年目のフルスタックエンジニアです。エストニアの大学でサイバーセキュリティー学部を専攻し、在学中に現地企業にてソフトウェアエンジニアとして就職しました。
+          {startYear} 年から 約{experienceInYear}年+
+          フルスタックエンジニアとして活動しています。
+          エストニアの大学でサイバーセキュリティー学部を専攻し、在学中から現地企業にてソフトウェアエンジニアとして就職しました。
         </Paragraph>
       </TransitionSection>
       <TransitionSection delay={0.4}>
         <Paragraph m="1em">
-          主に Agile/Scrum
-          そして比較的モダンな技術を使用した開発経験が豊富です。バックエンド、フロントエンド、Windowsアプリ開発、インフラ構築など様々な方面から携わってきました。
+          スタートアップ・エンタープライズ環境共に Agile/Scrum
+          での開発経験が豊富です。
         </Paragraph>
       </TransitionSection>
+      <TransitionSection delay={0.4}>
+        <Paragraph m="1em">
+          バックエンド、フロントエンド、Windowsアプリ開発、インフラ構築など
+          多方面から様々なプロジェクトに携わってきました。
+        </Paragraph>
+      </TransitionSection>
+
       <TransitionSection delay={0.6}>
         <Paragraph m="1em">
-          直近では新事業で0からSDKを開発する少数先鋭のリードエンジニアを経験しました。最近ではマネジメントやDevOps関連の技術に注力しています。
+          直近では新事業で0からSDKを開発する少数先鋭チームのリードエンジニアを経験しました。最近ではマネジメントやDevOps関連の技術に注力しています。
         </Paragraph>
       </TransitionSection>
     </Container>
