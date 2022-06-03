@@ -1,9 +1,7 @@
 import { FC } from 'react'
-import NextLink from 'next/link'
 import {
   Container,
   Box,
-  Link,
   Stack,
   Heading,
   Flex,
@@ -14,6 +12,7 @@ import {
   IconButton,
   useColorModeValue,
   BoxProps,
+  Link,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoLogoGithub } from 'react-icons/io5'
@@ -91,9 +90,9 @@ const Navbar: FC<NavbarProps> = ({ path, ...rest }) => {
               />
               <MenuList>
                 {MobileNavs.map((item, idx) => (
-                  <NextLink key={idx} href={item.path} passHref>
-                    <MenuItem as={Link}> {item.name}</MenuItem>
-                  </NextLink>
+                  <MenuItem as={Link} key={idx} href={item.path}>
+                    {item.name}
+                  </MenuItem>
                 ))}
               </MenuList>
             </Menu>
