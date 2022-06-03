@@ -67,12 +67,12 @@ export default function useAuth() {
     }
   }
   const login = async (email: string, password: string) => {
-    const response = await request({
+    await request({
       url: '/login',
       method: 'POST',
       params: { email, password },
     })
-    console.log(response)
+
     const token: AuthToken = {
       accessToken: 'some secure token',
       tokenType: 'Bearer',
