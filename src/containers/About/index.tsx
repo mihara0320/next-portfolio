@@ -12,8 +12,6 @@ const About: VFC = () => {
 
   useEffect(() => {
     const diff = differenceInYears(new Date(), new Date(2016, 1, 1))
-    console.log(new Date())
-    console.log(new Date(2016, 1, 1))
     setExperienceInYear(diff)
   }, [])
 
