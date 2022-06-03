@@ -2,7 +2,6 @@ import { VFC } from 'react'
 import {
   Container,
   Stack,
-  Badge,
   CircularProgress,
   CircularProgressLabel,
   Flex,
@@ -95,21 +94,19 @@ const Skills: VFC = () => {
         <Table variant="unstyled" flex="grow">
           <Tbody>
             {databases.map((data, i) => (
-              <TransitionSection key={i} delay={i * 0.1}>
-                <Tr>
-                  <Td>
-                    <Progress
-                      width={150}
-                      colorScheme={getLevelColor(data.level)}
-                      size="lg"
-                      value={data.level}
-                    />
-                  </Td>
-                  <Td>
-                    <Text>{data.name}</Text>
-                  </Td>
-                </Tr>
-              </TransitionSection>
+              <Tr key={i}>
+                <Td>
+                  <Progress
+                    width={150}
+                    colorScheme={getLevelColor(data.level)}
+                    size="lg"
+                    value={data.level}
+                  />
+                </Td>
+                <Td>
+                  <Text>{data.name}</Text>
+                </Td>
+              </Tr>
             ))}
           </Tbody>
         </Table>
