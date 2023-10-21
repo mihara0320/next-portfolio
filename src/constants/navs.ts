@@ -14,5 +14,6 @@ export const MobileNavs: Array<LinkItem> = [
   { name: 'ABOUT', path: ROUTES.HOME_PATH },
   { name: 'EXPERIENCE', path: ROUTES.EXPERIENCE_PATH },
   { name: 'SKILLS', path: ROUTES.SKILLS_PATH },
+  { name: 'LINKEDIN', path: 'https://www.linkedin.com/in/mihara0320' },
   { name: 'SOURCE', path: 'https://github.com/mihara0320/next-portfolio' },
 ]

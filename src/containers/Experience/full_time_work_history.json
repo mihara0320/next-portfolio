@@ -1,11 +1,20 @@
 {
   "data": [
     {
+      "title": "Staff DevOps Engineer",
+      "name": "GrabCAD/Stratasys",
+      "size": "2000+",
+      "location": "Tallinn, Estonia",
+      "period": "Nov 2022 - PRESENT",
+      "description": "インフラチームの一員としてクラウドプラットフォームの保守運用を担当しています。AWSのリソース管理全般からKubernetes(EKS)のメンテナンス、障害対応など幅広く担当しています。",
+      "technology": ["AWS", "Kubernetes", "Terraform", "Docker", "Helm"]
+    },
+    {
       "title": "Senior Software Engineer",
       "name": "GrabCAD/Stratasys",
       "size": "2000+",
       "location": "Tallinn, Estonia",
-      "period": "MAR 2019 - PRESENT",
+      "period": "MAR 2019 - NOV 2022",
       "description": "3Dプリンター技術関連の企業にて、クラウドサービスチームの一員として参加しました。主にBusiness IntelligenceやConnectivityをテーマにした業務に多く関わりました。直近では新事業でほぼ0からSDKを開発する少数先鋭のリードエンジニアを経験しました。",
       "technology": ["Typescript", "React", "Electron", "Node.js", ".Net Framework", "PostgresSQL", "AWS", "Kubernetes"]
     },
