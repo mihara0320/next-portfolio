@@ -15,7 +15,7 @@ import {
   Link,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { IoLogoGithub } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import LinkItem from 'components/LintItem'
 import Logo from 'components/Logo'
 import ThemeToggleButton from 'components/ThemeToggleButton'
@@ -63,6 +63,18 @@ const Navbar: FC<NavbarProps> = ({ path, ...rest }) => {
               {item.name}
             </LinkItem>
           ))}
+          <LinkItem
+            _target="_blank"
+            href="https://www.linkedin.com/in/mihara0320"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoLinkedin />
+            LINKEDIN
+          </LinkItem>
           <LinkItem
             _target="_blank"
             href="https://github.com/mihara0320/next-portfolio"
